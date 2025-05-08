@@ -1,0 +1,27 @@
+# Quy ước về URL: /<controller>/<action>/<tham số 1>/<tham số 2>/...
+# Khi người dùng truy cập /user:
+- .htaccess sẽ rewrite URL này thành index.php?url=user
+- index.php sẽ nhận giá trị url là user và phân tích:
+    + $controllerName là User
+    + $actionName là index (mặc định)
+- File controllers/UserController.php sẽ được require/include.
+- Class UserController sẽ được khởi tạo
+- Phương thức index() của UserController sẽ được gọi, trình duyệt sẽ hiển thị 
+    nội dung do index() xây dựng
+# Hàm explode('dau_phan_tach',"chuoi"):
+- Tách một chuỗi thành một 'mảng' các chuỗi con dựa trên một dấu phân cách
+- Khi xử lí URL thì dấu phân tách thường là /
+- Ví dụ:
+    +  URL: user/view/123
+    + Biến $url có giá trị "user/view/123"
+    + Dùng hàm: $parts = explode('/', "user/view/123")
+    + Kết quả: [
+        0 => "user",
+        1 => "view",
+        2 => "123"
+    ]
+=> Phân tích cấu trúc URL ánh xạ đến các thành phần xử lý logic(controller và action)
+    cùng với các tham số liên quan
+=> Dùng giá trị của $parts để:
+    + Xác định Controller, action nào sẽ được gọi
+    + Truyền tham số cho các phương thức xử lí yêu cầu từ người dùng
