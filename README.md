@@ -17,14 +17,14 @@
   - **`page/`**: Chứa các tệp giao diện cụ thể.
 
 #### **Thư mục `core`**
-- **`Controller.php`**: Có thể là lớp cơ sở cho các Controller.
-- **`Model.php`**: Có thể là lớp cơ sở cho các Model.
-- **`Router.php`**: Có thể là lớp định tuyến, xử lý URL và ánh xạ chúng tới các Controller.
+- **`Controller.php`**: Lớp cơ sở cho các Controller.
+- **`Model.php`**: Lớp cơ sở cho các Model.
+- **`Router.php`**: Lớp định tuyến, xử lý URL và ánh xạ chúng tới các Controller.
 
 #### **Thư mục `public`**
 - **`index.html`**: Tệp HTML chính, có thể là điểm vào của ứng dụng.
 - **`css/`**: Chứa tệp CSS để định kiểu giao diện.
-  - `style.css`: Tệp CSS chính.
+- `style.css`: Tệp CSS chính.
 - **`image/`**: Chứa hình ảnh tĩnh.
 - **`js/`**: Chứa các tệp JavaScript.
 
