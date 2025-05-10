@@ -1,3 +1,21 @@
+img {
+    width: 100px;
+    margin: 50px;
+}
+
+/* Thêm hiệu ứng quay vòng */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating-img {
+    animation: rotate 5s linear infinite; 
+}
 .out {
     border: 1px solid #000 !important;
 }
