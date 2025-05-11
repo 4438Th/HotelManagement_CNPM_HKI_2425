@@ -2,7 +2,12 @@
 class BaseModel
 {
     protected $conn;
-    //Tạo kết nối
+    protected $primaryKey = '';
+    protected $table = '';
+    protected $fillable = [];
+    protected $hidden = [];
+    protected $casts = [];
+    // Tạo kết nối
     public function __construct()
     {
         $this->conn = new mysqli("localhost", "root", "", "QuanLyKhachSan");
@@ -10,6 +15,31 @@ class BaseModel
         if ($this->conn->connect_error) {
             die("Kết nối thất bại: " . $this->conn->connect_error);
         }
+    }
+    // Đóng kết nối
+    public function __destruct()
+    {
+        $this->conn->close();
+    }
+    // Ẩn các thuộc tính
+    public function hideAttributes(array $attributes)
+    {
+        foreach ($this->hidden as $hiddenField) {
+            if (isset($attributes[$hiddenField])) {
+                unset($attributes[$hiddenField]);
+            }
+        }
+        return $attributes;
+    }
+    // Phương thức chuyển đổi kiểu dữ liệu
+    public function castAttributes(array $attributes)
+    {
+        foreach ($attributes as $key => $value) {
+            if (isset($this->casts[$key])) {
+                settype($attributes[$key], $this->casts[$key]);
+            }
+        }
+        return $attributes;
     }
     // Lấy toàn bộ bản ghi
     public function getAll($table)
@@ -62,8 +92,20 @@ class BaseModel
         return $this->conn->query($sql);
     }
 
-    public function __destruct()
+    public function getRelated($relatedTable, $foreignKey, $value)
     {
-        $this->conn->close();
+        $sql = "SELECT * FROM $relatedTable WHERE $foreignKey = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("s", $value);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        $data = [];
+        if ($result && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+        }
+        return $data;
     }
 }
