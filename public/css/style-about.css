@@ -1,0 +1,352 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f2f5; /* Light grey background for the main content area */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Adjusted for potentially wider search bar */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+header {
+    background-color: #004d26; /* Dark green */
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Ensure logo text is white */
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+}
+
+.main-nav ul li {
+    margin-left: 20px; /* Spacing between nav items */
+}
+.main-nav ul li:first-child {
+    margin-left: 0; /* No margin for the first item if centered */
+}
+
+
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold; /* Bolder nav links */
+    text-transform: uppercase; /* Make text uppercase as in image */
+}
+.main-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.auth-buttons button {
+    background-color: #fff;
+    color: #004d26; /* Dark green text */
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+.auth-buttons .btn-login { /* Login button with border */
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+
+/* Updated Search Section */
+.search-section {
+    background-color: #004d26; /* Dark green */
+    color: #fff;
+    padding: 40px 0 50px; /* Adjusted padding */
+    text-align: center;
+}
+
+.search-section h2 {
+    font-size: 30px; /* Slightly adjusted size */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.search-subtitle {
+    font-size: 13px;
+    margin-bottom: 25px;
+    color: #e0e0e0; /* Lighter white for subtitle */
+}
+
+.search-form {
+    display: flex;
+    /* flex-wrap: wrap; NO LONGER NEEDED FOR THIS LAYOUT */
+    gap: 10px; /* Spacing between items */
+    background-color: #fff;
+    padding: 20px; /* Padding inside the white box */
+    border-radius: 8px;
+    border: 4px solid #ffc107; /* Prominent yellow border */
+    max-width: 950px; /* Max width of the search bar container */
+    margin: 0 auto; /* Center the search bar container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    align-items: center; /* Vertically align items if heights differ slightly */
+}
+
+.search-form input[type="text"] {
+    flex-grow: 1; /* Allow inputs to grow */
+    padding: 12px 15px;
+    border: 1px solid #60a080; /* Green border for inputs */
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #f8f9fa; /* Very light grey background for inputs */
+    color: #495057; /* Input text color */
+    height: 42px; /* Explicit height */
+}
+.search-form input[type="text"]::placeholder {
+    color: #6c757d; /* Grey placeholder text */
+}
+
+/* Adjust flex-basis for inputs for better distribution on one line */
+.search-form input[type="text"]:nth-child(1) {
+    flex-basis: 35%; /* "Bạn sẽ đi đâu?" - give it more space */
+    min-width: 180px; /* Prevent it from becoming too small */
+}
+.search-form input[type="text"]:nth-child(2) {
+    flex-basis: 28%; /* "Ngày check-in..." */
+    min-width: 160px;
+}
+.search-form input[type="text"]:nth-child(3) {
+    flex-basis: 27%; /* "2 người lớn..." */
+    min-width: 150px;
+}
+
+
+.btn-search {
+    background-color: #006442; /* Darker green for search button */
+    color: #fff;
+    border: none;
+    padding: 0 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 4px;
+    height: 42px; /* Explicit height to match inputs */
+    line-height: 42px; /* Vertically center text in button */
+    flex-shrink: 0; /* Prevent button from shrinking excessively */
+    /* margin-top: 10px; NO LONGER NEEDED */
+}
+.btn-search:hover {
+    background-color: #005235; /* Slightly darker on hover */
+}
+
+
+
+/* Main Wrapper & Content Layout (Keep as is or adjust if needed) */
+.main-wrapper {
+    background-color: #f0f2f5;
+    padding: 20px 0;
+}
+
+.content-layout {
+    display: flex;
+    gap: 20px;
+}
+
+/* Sidebar (Keep as is or adjust if needed) */
+.sidebar {
+    flex-basis: 25%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sidebar-section {
+    margin-bottom: 25px;
+}
+.sidebar-section:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-section h3 {
+    font-size: 16px;
+    color: #004d26;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-section ul {
+    list-style: none;
+}
+
+.sidebar-section ul li {
+    margin-bottom: 8px;
+}
+
+.sidebar-section ul li a {
+    color: #0071c2;
+    text-decoration: none;
+    font-size: 13px;
+}
+.sidebar-section ul li a:hover {
+    text-decoration: underline;
+}
+.sidebar-section p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 10px;
+}
+.sidebar-section:nth-of-type(2) ul li {
+    color: #333;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+
+/* Main Content (Keep as is or adjust if needed) */
+/* Main Content */
+.main-content {
+    flex-basis: 75%; /* Adjust as needed */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.main-content > p:first-of-type { /* First intro paragraph */
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.hotel-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.main-content article {
+    margin-bottom: 20px;
+}
+
+.main-content article h4 {
+    font-size: 16px;
+    color: #004d26; /* Dark green headings */
+    margin-bottom: 8px;
+}
+
+.main-content article p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444; /* Dark grey text for paragraphs */
+}
+
+
+/* Footer (Keep as is or adjust if needed) */
+/* Footer */
+footer {
+    background-color: #004d26; /* Dark green background, same as header */
+    color: #a0bfa8; /* Default text color for footer (light green/grey) */
+    padding: 40px 0 20px; /* More padding top, less bottom */
+    font-size: 13px;
+}
+
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow footer columns to wrap on smaller screens */
+    gap: 20px; /* Gap between columns */
+    padding-bottom: 30px; /* Space before the line */
+    border-bottom: 1px solid #799684; /* Lighter green/grey separator line */
+}
+
+.footer-column {
+    flex: 1; /* Distribute space among columns */
+    min-width: 180px; /* Minimum width for footer columns before wrapping */
+}
+
+.footer-column h4 {
+    color: #fff; /* White headings */
+    font-size: 16px; /* Slightly larger heading */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding-left: 0; /* Remove default padding */
+}
+
+.footer-column ul li {
+    margin-bottom: 10px; /* Increased spacing between links */
+}
+
+.footer-column ul li a {
+    color: #d0e0d8; /* Lighter, more legible link color on dark green */
+    text-decoration: none;
+    font-size: 13px;
+}
+.footer-column ul li a:hover {
+    color: #fff; /* White on hover */
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    align-items: center;
+    padding-top: 20px; /* Space after the line */
+}
+
+.flag-currency {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between flag and VND text */
+}
+
+.flag-icon-vn {
+    display: inline-flex; /* Use flex to center content */
+    justify-content: center;
+    align-items: center;
+    width: 22px; /* Adjust size */
+    height: 22px; /* Adjust size */
+    background-color: #da251d; /* Red color for Vietnam flag */
+    border-radius: 50%; /* Circular flag */
+    color: #ffcc00; /* Yellow star color */
+    font-size: 13px; /* Adjust star size */
+    font-weight: bold;
+    line-height: 1; /* Ensure star is centered vertically */
+}
+
+.currency-code {
+    color: #d0e0d8; /* Same as link color */
+    font-size: 14px;
+}
