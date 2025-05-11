@@ -1,0 +1,132 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 200px; /* Độ rộng của menu bên trái */
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+.sidebar li:hover{
+ background-color: #56b57a;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.sidebar h2{
+    color: #005721;
+    font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.section {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #005721;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin-right: 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section a {
+  color: white;
+  text-decoration: none;
+}
+
+.language-selector {
+  color: white;
+  margin-top: 10px;
+}
+
+.language-selector select {
+  background-color: #005721;
+  color: white;
+  border: none;
+}
+
+/* Media queries cho màn hình nhỏ */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Chuyển container thành cột */
+  }
+
+  .sidebar {
+    width: 100%; /* Menu sẽ chiếm toàn bộ chiều rộng */
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    flex-direction: column; /* Footer sẽ sắp xếp theo cột */
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer-section {
+    margin-bottom: 10px;
+  }
+
+  .language-selector {
+    margin-top: 5px;
+  }
+}
