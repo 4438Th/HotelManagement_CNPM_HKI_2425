@@ -1,0 +1,111 @@
+body {
+    background-image: url('../image/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('anh-nen-cua-ban.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.login-form {
+    background-color: rgba(0, 87, 42, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    color: white;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #28c77b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-form .separator {
+    text-align: center;
+    margin: 15px 0;
+    color: white;
+}
+
+.login-form .social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-form .social-login button {
+    background-color: white;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form .social-login button img {
+    margin-right: 5px;
+    height: 20px;
+}
+
+.login-form .signup-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signup-link a {
+    color: white;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .login-form {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login-container {
+    padding: 20px;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .login-form input,
+  .login-form button {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .login-form .social-login button {
+    font-size: 14px;
+  }
+}
