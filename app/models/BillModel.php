@@ -1,5 +1,5 @@
 <?php
-class InvoiceModel extends BaseModel
+class BillModel extends BaseModel
 {
     protected $table = 'HOADON';
     protected $primaryKey = 'ID_HD';
