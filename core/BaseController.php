@@ -2,7 +2,7 @@
 
 namespace Core;
 
-class Controller
+class BaseController
 {
     protected $view;
     protected $model;
