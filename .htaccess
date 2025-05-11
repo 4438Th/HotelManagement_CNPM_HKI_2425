@@ -2,12 +2,7 @@
 RewriteEngine On
 #Kiểm tra đường dẫn yêu cầu "không phải là `file thật` trên server"
 RewriteCond %{REQUEST_FILENAME} !-f
-#Kiểm tra đường dẫn yêu cầu "không phải là `thư mục` thật trên server"
+#Kiểm tra đường dẫn yêu cầu "không phải là `thư mục thật` trên server"
 RewriteCond %{REQUEST_FILENAME} !-d
 #Thực hiện `rewrite` lại URL
 RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
-# ^(.*)$: Khớp với bất kỳ URL nào (bắt đầu từ dấu / cho tới hết)
-# index.php?url=$1: chuyển hướng đến index.php
-# url=$1: gán giá trị khớp đầu tiên từ biểu thức (.*) cho url
-# [QSA]: Giữ lại các tham số trong query string gốc nếu có
-# [L]: dừng xử lí các RewriteRule phía sau nếu URL thỏa mãn điều kiện RewriteRule này
