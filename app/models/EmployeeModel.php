@@ -1,2 +1,5 @@
 <?php
-class EmployeeModel extends BaseModel {}
+class EmployeeModel extends BaseModel 
+{
+
+}

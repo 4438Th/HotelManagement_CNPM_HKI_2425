@@ -1,48 +1,107 @@
 <?php
 class RoomModel extends BaseModel
 {
-    protected $table = 'PHONG';
-    protected $primaryKey = 'ID_PHONG';
+    protected $table = 'ROOM';
+    protected $primaryKey = 'roomID';
+    protected $foreignKeys = [
+        'empAccountId' => 'EmployeeAccountModel',
+    ];
     protected $fillable = [
-        'Toa_Nha',
-        'So_Tang',
-        'So_Phong',
-        'Suc_Chua',
-        'Loai_Phong',
-        'Gia_Phong',
-        'Trang_Thai_Phong',
-        'ID_NV'
+        'roomID',
+        'building',
+        'floor',
+        'room', 
+        'capacity',
+        'type',
+        'price',
+        'state',
+        'empAccountId',
     ];
+    protected $hidden = [];
     protected $casts = [
-        'ID_PHONG' => 'string',
-        'Toa_Nha' => 'string',
-        'So_Tang' => 'int',
-        'So_Phong' => 'int',
-        'Suc_Chua' => 'int',
-        'Loai_Phong' => 'int',
-        'Gia_Phong' => 'float',
-        'Trang_Thai_Phong' => 'bool',
-        'ID_NV' => 'string'
+        'floor' => 'integer',
+        'room' => 'integer',
+        'capacity' => 'integer',
+        'price' => 'float',
     ];
-    // Lấy thông tin phòng theo ID
-    public function getById($id)
+
+    /**
+     * Lấy tất cả các phòng.
+     *
+     * @return array
+     */
+    public function getAllRooms()
     {
-        $sql = "SELECT * FROM {$this->table} WHERE {$this->primaryKey} = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("s", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
+        return $this->getAll($this->table);
+    }
+
+    /**
+     * Tìm một phòng theo ID.
+     *
+     * @param string $id
+     * @return array|null
+     */
+    public function findRoomById(string $id)
+    {
+        $sql = "SELECT * FROM {$this->table} WHERE {$this->primaryKey} = '{$id}' LIMIT 1";
+        $result = $this->conn->query($sql);
         return ($result && $result->num_rows > 0) ? $result->fetch_assoc() : null;
     }
 
-    // Lấy danh sách phòng theo nhân viên
-    public function getByEmployee($idNhanVien)
+    /**
+     * Thêm một phòng mới.
+     *
+     * @param array $data
+     * @return bool
+     */
+    public function insertRoom(array $data)
     {
-        $sql = "SELECT * FROM {$this->table} WHERE ID_NV = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("s", $idNhanVien);
-        $stmt->execute();
-        return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $this->insert($this->table, $data);
+    }
+
+    /**
+     * Cập nhật thông tin một phòng.
+     *
+     * @param array $data
+     * @param string $id
+     * @return bool
+     */
+    public function updateRoom(array $data, string $id)
+    {
+        $updates = [];
+        foreach ($data as $key => $value) {
+            $updates[] = "$key = '" . $this->conn->real_escape_string($value) . "'";
+        }
+        $updateStr = implode(",", $updates);
+        $sql = "UPDATE {$this->table} SET {$updateStr} WHERE {$this->primaryKey} = '{$id}'";
+        return $this->conn->query($sql);
+    }
+
+    /**
+     * Xóa một phòng theo ID.
+     *
+     * @param string $id
+     * @return bool
+     */
+    public function deleteRoom(string $id)
+    {
+        $sql = "DELETE FROM {$this->table} WHERE {$this->primaryKey} = '{$id}'";
+        return $this->conn->query($sql);
+    }
+
+    /**
+     * Lấy thông tin nhân viên quản lý phòng.
+     *
+     * @param string $roomId
+     * @return array|null
+     */
+    public function getEmployeeAccount($roomId)
+    {
+        $sql = "SELECT ea.* FROM {$this->table} r
+                JOIN EmployeeAccount ea ON r.empAccountId = ea.empAccountId
+                WHERE r.{$this->primaryKey} = '{$roomId}'";
+        $result = $this->conn->query($sql);
+        return ($result && $result->num_rows > 0) ? $result->fetch_assoc() : null;
     }
 }
 ?>
