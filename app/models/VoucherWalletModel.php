@@ -1,5 +1,6 @@
 <?php
-class BillModel extends BaseModel
+
+class VoucherWalletModel extends BaseModel
 {
     protected $table = 'VOUCHERWALLET';
     protected $primaryKey = ['vwID', 'cusAccountId']; // Bảng này có khóa chính kép
@@ -22,6 +23,7 @@ class BillModel extends BaseModel
     {
         return $this->getAll($this->table);
     }
+
     /**
      * Tìm một ví voucher theo ID ví và ID tài khoản khách hàng.
      *
@@ -35,6 +37,7 @@ class BillModel extends BaseModel
         $result = $this->conn->query($sql);
         return ($result && $result->num_rows > 0) ? $result->fetch_assoc() : null;
     }
+
     /**
      * Thêm một ví voucher mới.
      *
@@ -45,6 +48,7 @@ class BillModel extends BaseModel
     {
         return $this->insert($this->table, $data);
     }
+
     /**
      * Cập nhật thông tin một ví voucher.
      *
@@ -63,6 +67,7 @@ class BillModel extends BaseModel
         $sql = "UPDATE {$this->table} SET {$updateStr} WHERE vwID = '{$vwId}' AND cusAccountId = '{$cusAccountId}'";
         return $this->conn->query($sql);
     }
+
     /**
      * Xóa một ví voucher theo ID ví và ID tài khoản khách hàng.
      *
@@ -121,3 +126,4 @@ class BillModel extends BaseModel
         return $data;
     }
 }
+?>

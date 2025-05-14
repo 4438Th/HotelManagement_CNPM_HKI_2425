@@ -3,10 +3,12 @@ class BaseModel
 {
     protected $conn;
     protected $primaryKey = '';
+    protected $foreignKeys = '';
     protected $table = '';
     protected $fillable = [];
     protected $hidden = [];
     protected $casts = [];
+
     // Tạo kết nối
     public function __construct()
     {
@@ -90,22 +92,5 @@ class BaseModel
     {
         $sql = "DELETE FROM $table WHERE id = $id";
         return $this->conn->query($sql);
-    }
-
-    public function getRelated($relatedTable, $foreignKey, $value)
-    {
-        $sql = "SELECT * FROM $relatedTable WHERE $foreignKey = ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("s", $value);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        $data = [];
-        if ($result && $result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $data[] = $row;
-            }
-        }
-        return $data;
     }
 }

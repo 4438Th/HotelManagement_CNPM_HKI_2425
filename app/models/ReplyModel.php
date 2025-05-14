@@ -1,47 +1,40 @@
 <?php
-class RoomModel extends BaseModel
-{
-    protected $table = 'ROOM';
-    protected $primaryKey = 'roomID';
+class ReplyModel extends BaseModel {
+    protected $table = 'REPLY';
+    protected $primaryKey = 'replyID';
     protected $foreignKeys = [
-        'empAccountId' => 'EmployeeAccountModel',
+        'empAccountId' => 'EmployeeAccountModel', // Giả sử có model EmployeeAccountModel
+        'cusAccountId' => 'CustomerAccountModel', // Giả sử có model CustomerAccountModel
     ];
     protected $fillable = [
-        'roomID',
-        'building',
-        'floor',
-        'room', 
-        'capacity',
-        'type',
-        'price',
-        'state',
+        'replyID',
+        'createdAt',
+        'content',
         'empAccountId',
+        'cusAccountId',
     ];
     protected $hidden = [];
     protected $casts = [
-        'floor' => 'integer',
-        'room' => 'integer',
-        'capacity' => 'integer',
-        'price' => 'float',
+        'createdAt' => 'datetime',
     ];
 
     /**
-     * Lấy tất cả các phòng.
+     * Lấy tất cả các phản hồi.
      *
      * @return array
      */
-    public function getAllRooms()
+    public function getAllReplies()
     {
         return $this->getAll($this->table);
     }
 
     /**
-     * Tìm một phòng theo ID.
+     * Tìm một phản hồi theo ID.
      *
      * @param string $id
      * @return array|null
      */
-    public function findRoomById(string $id)
+    public function findReplyById(string $id)
     {
         $sql = "SELECT * FROM {$this->table} WHERE {$this->primaryKey} = '{$id}' LIMIT 1";
         $result = $this->conn->query($sql);
@@ -49,24 +42,24 @@ class RoomModel extends BaseModel
     }
 
     /**
-     * Thêm một phòng mới.
+     * Thêm một phản hồi mới.
      *
      * @param array $data
      * @return bool
      */
-    public function insertRoom(array $data)
+    public function insertReply(array $data)
     {
         return $this->insert($this->table, $data);
     }
 
     /**
-     * Cập nhật thông tin một phòng.
+     * Cập nhật thông tin một phản hồi.
      *
      * @param array $data
      * @param string $id
      * @return bool
      */
-    public function updateRoom(array $data, string $id)
+    public function updateReply(array $data, string $id)
     {
         $updates = [];
         foreach ($data as $key => $value) {
@@ -78,30 +71,44 @@ class RoomModel extends BaseModel
     }
 
     /**
-     * Xóa một phòng theo ID.
+     * Xóa một phản hồi theo ID.
      *
      * @param string $id
      * @return bool
      */
-    public function deleteRoom(string $id)
+    public function deleteReply(string $id)
     {
         $sql = "DELETE FROM {$this->table} WHERE {$this->primaryKey} = '{$id}'";
         return $this->conn->query($sql);
     }
 
     /**
-     * Lấy thông tin nhân viên quản lý phòng.
+     * Lấy thông tin tài khoản nhân viên gửi phản hồi.
      *
-     * @param string $roomId
+     * @param string $replyId
      * @return array|null
      */
-    public function getEmployeeAccount($roomId)
+    public function getEmployeeAccount($replyId)
     {
         $sql = "SELECT ea.* FROM {$this->table} r
                 JOIN EmployeeAccount ea ON r.empAccountId = ea.empAccountId
-                WHERE r.{$this->primaryKey} = '{$roomId}'";
+                WHERE r.{$this->primaryKey} = '{$replyId}'";
+        $result = $this->conn->query($sql);
+        return ($result && $result->num_rows > 0) ? $result->fetch_assoc() : null;
+    }
+
+    /**
+     * Lấy thông tin tài khoản khách hàng gửi phản hồi.
+     *
+     * @param string $replyId
+     * @return array|null
+     */
+    public function getCustomerAccount($replyId)
+    {
+        $sql = "SELECT ca.* FROM {$this->table} r
+                JOIN CustomerAccount ca ON r.cusAccountId = ca.cusAccountId
+                WHERE r.{$this->primaryKey} = '{$replyId}'";
         $result = $this->conn->query($sql);
         return ($result && $result->num_rows > 0) ? $result->fetch_assoc() : null;
     }
 }
-?>
