@@ -3,212 +3,244 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <title>Payment Page</title>
-    <link rel="stylesheet" href="css/globals-pay.css" />
-    <link rel="stylesheet" href="css/style-pay.css" />
+    <title>Hotel Booking Payment</title>
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="payment">
+    <div class="payment" data-model-id="3:2">
       <div class="content">
         <header class="header">
           <h1 class="hotel-name">THE HOTEL</h1>
         </header>
-        <main>
+        <main class="main-content">
           <section class="booking-details">
-            <h2>Booking Details</h2>
-            <div class="hotel-info">
-              <h3>808 -tầng 8</h3>
-              <p>Room</p>
-              <address>123 Đường Mai Anh Đào, Phường 8, Đà Lạt, Lâm Đồng, Việt Nam</address>
+            <h2 class="section-title">Chi tiết đặt phòng</h2>
+            <div class="room-info">
+              <h3 class="room-name">808 -tầng 8</h3>
+              <p class="room-type">Phòng</p>
+              <address class="hotel-address">123 Đường Mai Anh Đào, Phường 8, Đà Lạt, Lâm Đồng, Việt Nam</address>
               <div class="rating">
-                <span class="score">8.7</span>
-                <span class="reviews">· 161 tuyêth voeif</span>
+                <span class="rating-score">8.7</span>
+                <span class="rating-count">· 161 tuyêth voeif</span>
               </div>
               <ul class="amenities">
-                <li>wifi</li>
-                <li>Hồ Bơi</li>
+                <li class="amenity">
+                  <span class="amenity-icon wifi"></span>
+                  <span class="amenity-name">wifi</span>
+                </li>
+                <li class="amenity">
+                  <span class="amenity-icon pool"></span>
+                  <span class="amenity-name">Hồ Bơi</span>
+                </li>
               </ul>
             </div>
-            <div class="reservation-details">
-              <h3>Reservation Details</h3>
-              <div class="check-in-out">
-                <div class="check-in">
-                  <h4>Check-in</h4>
-                  <p>Fri, 2/5/2025</p>
-                  <p>2:00 PM – 11:30 PM</p>
-                </div>
-                <div class="check-out">
-                  <h4>Check-out</h4>
-                  <p>Sun, 4/5/2025</p>
-                  <p>5:00 AM – 12:00 PM</p>
-                </div>
+            <div class="stay-details">
+              <div class="check-in">
+                <h4>Nhận phòng</h4>
+                <p class="date">T6, 2/5/2025</p>
+                <p class="time">2:00 PM – 11:30 PM</p>
               </div>
-              <p>Total stay: 2 nights</p>
-              <div class="room-selection">
-                <h4>Your selection</h4>
-                <p>1 Room for 2 adults</p>
+              <div class="check-out">
+                <h4>Trả Phòng</h4>
+                <p class="date">CN,4/5/2025</p>
+                <p class="time">5:00 AM – 12:00 PM</p>
               </div>
+              <p class="stay-duration">
+                <span>Tổng thời gian lưu trú:</span>
+                <strong>2 đêm</strong>
+              </p>
             </div>
-            <div class="price-summary">
-              <h3>Price Summary</h3>
-              <dl>
-                <dt>Original Price</dt>
-                <dd>VND 1,200,000</dd>
-                <dt>Discounted Price</dt>
-                <dd>VND 1,000,000</dd>
-              </dl>
-              <div class="total-price">
-                <h4>Total Price</h4>
-                <p><s>VND 1,200,000</s></p>
-                <p>VND 1,000,000</p>
+            <div class="room-selection">
+              <h4>Bạn đã chọn</h4>
+              <p>1 Phòng cho 2 người lớn</p>
+            </div>
+          </section>
+          <section class="price-summary">
+            <h2 class="section-title">Tóm tắt giá</h2>
+            <ul class="price-breakdown">
+              <li>
+                <span>Giá Gốc</span>
+                <span>VND 1.200.000</span>
+              </li>
+              <li class="discounted-price">
+                <span>Giá ưu đãi</span>
+                <span>VND 1.000.000</span>
+              </li>
+            </ul>
+            <div class="total-price">
+              <h3>Giá</h3>
+              <div class="price-display">
+                <span class="original-price">VND 1.200.000</span>
+                <span class="final-price">VND 1.000.000</span>
               </div>
             </div>
           </section>
           <section class="guest-details">
-            <h2>Enter Your Details</h2>
-            <p>Please fill in the required information (*)</p>
-            <form>
+            <h2 class="section-title">Nhập thông tin chi tiết của bạn</h2>
+            <p class="instruction">
+              Gần xong rồi! Chỉ cần điền phần thông tin * bắt buộc<br />
+              Vui lòng nhập thông tin của bạn bằng ký tự Latin để chỗ nghỉ có thể hiểu được
+            </p>
+            <form class="guest-form">
               <div class="form-group">
-                <label for="lastName">Last Name <span aria-label="required">*</span></label>
+                <label for="lastName">
+                  Họ
+                  <span class="required">*</span>
+                </label>
                 <input type="text" id="lastName" name="lastName" required />
               </div>
               <div class="form-group">
-                <label for="firstName">First Name <span aria-label="required">*</span></label>
+                <label for="firstName">
+                  Tên
+                  <span class="required">*</span>
+                </label>
                 <input type="text" id="firstName" name="firstName" required />
               </div>
               <div class="form-group">
-                <label for="email">Email Address <span aria-label="required">*</span></label>
+                <label for="email">
+                  Địa chỉ email
+                  <span class="required">*</span>
+                </label>
                 <input type="email" id="email" name="email" required />
-                <p>Booking confirmation will be sent to this email address</p>
+                <p class="form-hint">Email xác nhận đặt phòng sẽ được gửi đến địa chỉ này</p>
               </div>
               <div class="form-group">
-                <label for="phone">Phone Number <span aria-label="required">*</span></label>
+                <label for="phone">
+                  Số điện thoại
+                  <span class="required">*</span>
+                </label>
                 <div class="phone-input">
                   <select id="countryCode" name="countryCode">
                     <option value="+84">VN +84</option>
                   </select>
                   <input type="tel" id="phone" name="phone" required />
                 </div>
-                <p>For booking verification and property communication</p>
+                <p class="form-hint">Để xác minh đơn đặt và để chỗ nghỉ liên lạc khi cần</p>
               </div>
               <div class="form-group">
-                <label for="country">Country/Region <span aria-label="required">*</span></label>
+                <label for="country">
+                  Vùng/quốc gia
+                  <span class="required">*</span>
+                </label>
                 <input type="text" id="country" name="country" required />
               </div>
               <div class="form-group">
-                <input type="checkbox" id="appLink" name="appLink" />
-                <label for="appLink">Send me a link to download the app</label>
+                <input type="checkbox" id="appDownload" name="appDownload" />
+                <label for="appDownload">Chúng tôi sẽ nhắn tin cho bạn đường dẫn để tải ứng dụng</label>
               </div>
             </form>
           </section>
           <section class="arrival-time">
-            <h2>Your Arrival Time</h2>
-            <p>Late check-in until 23:00.</p>
-            <div class="form-group">
-              <label for="estimatedArrival">Add your estimated arrival time</label>
-              <select id="estimatedArrival" name="estimatedArrival">
-                <option value="">Select time</option>
-              </select>
-              <p>Time is in Ho Chi Minh City timezone</p>
+            <h2 class="section-title">Thời gian đến của bạn</h2>
+            <p class="check-in-info">Nhận phòng muộn đến 23:00.</p>
+            <div class="arrival-time-input">
+              <label for="arrivalTime">Thêm thời gian đến dự kiến của bạn</label>
+              <input type="time" id="arrivalTime" name="arrivalTime" />
+              <p class="time-zone">Thời gian theo múi giờ của TP. Hồ Chí Minh</p>
             </div>
           </section>
           <section class="special-requests">
-            <h2>Special Requests</h2>
+            <h2 class="section-title">Các Yêu Cầu Đặc Biệt</h2>
             <p>
-              Special requests are not guaranteed but the property will do its best to meet your needs. You can always
-              make special requests after your booking is complete!
+              Các yêu cầu đặc biệt không đảm bảo sẽ được đáp ứng – tuy nhiên, chỗ nghỉ sẽ cố gắng hết sức để thực hiện.
+              Bạn luôn có thể gửi yêu cầu đặc biệt sau khi hoàn tất đặt phòng của mình!
             </p>
-            <div class="form-group">
-              <label for="specialRequests">Please write your requests here (optional)</label>
+            <div class="special-request-input">
+              <label for="specialRequests">Vui lòng ghi yêu cầu của bạn tại đây. (không bắt buộc)</label>
               <textarea id="specialRequests" name="specialRequests"></textarea>
             </div>
           </section>
           <section class="house-rules">
-            <h2>Review House Rules</h2>
-            <p>The host would like you to agree to the following house rules:</p>
-            <ul>
-              <li>No smoking</li>
-              <li>No parties or events</li>
-              <li>No pets allowed</li>
+            <h2 class="section-title">Xem lại quy tắc chung</h2>
+            <p>Chủ chỗ nghỉ muốn bạn đồng ý với các quy tắc chung này:</p>
+            <ul class="rules-list">
+              <li>Không hút thuốc</li>
+              <li>Không tiệc tùng/sự kiện</li>
+              <li>Không cho phép thú cưng</li>
             </ul>
-            <p>By proceeding with the next steps, you are agreeing to these house rules.</p>
+            <p>Khi tiếp tục các bước tiếp theo, bạn đồng ý với các quy tắc chung này.</p>
           </section>
           <section class="booking-tips">
-            <h2>Booking Tips:</h2>
-            <ul>
-              <li>No credit card needed</li>
-              <li>You'll have the entire apartment to yourself!</li>
-              <li>No payment required today. You'll pay during your stay.</li>
+            <h2 class="section-title">Mách nhỏ:</h2>
+            <ul class="tips-list">
+              <li>Không cần thẻ tín dụng</li>
+              <li>Bạn sẽ có nguyên căn hộ cho riêng mình!</li>
+              <li>Hôm nay không cần trả tiền. Bạn sẽ thanh toán trong lúc nghỉ.</li>
               <li>
-                Congratulations! You've chosen the lowest-priced apartment at LANDMARK 81 Residences Suite. Don't miss
-                out, book now!
+                Xin chúc mừng bạn! Bạn đã lựa chọn căn hộ giá thấp nhất tại LANDMARK 81 Residences Suite. Đừng bỏ lỡ,
+                hãy đặt phòng ngay!
               </li>
             </ul>
           </section>
         </main>
         <div class="payment-action">
-          <button type="submit" class="pay-button">THANH TOÁN</button>
+          <button type="submit" class="pay-button">
+            THANH TOÁN
+            <span class="button-icon"></span>
+          </button>
         </div>
         <footer class="footer">
           <div class="footer-content">
             <div class="footer-column">
-              <h3>Support</h3>
+              <h3>Hỗ trợ</h3>
               <ul>
-                <li>Coronavirus (COVID-19) FAQs</li>
-                <li>Manage your trip</li>
-                <li>Contact Customer Service</li>
-                <li>Safety Resource Center</li>
+                <li>Câu hỏi thường gặp về Coronavirus(COVID-19)</li>
+                <li>Quản lý chuyến đi của bạn</li>
+                <li>Liên hệ bộ phận Chăm sóc Khách hàng</li>
+                <li>Trung tâm Tài nguyên An toàn</li>
               </ul>
             </div>
             <div class="footer-column">
-              <h3>Discover</h3>
+              <h3>Khám phá</h3>
               <ul>
-                <li>Genius loyalty program</li>
-                <li>Seasonal and holiday deals</li>
-                <li>Travel articles</li>
-                <li>Booking.com for Business</li>
-                <li>Traveller Review Awards</li>
-                <li>Car rental</li>
-                <li>Flight finder</li>
-                <li>Restaurant reservations</li>
-                <li>THE HOTEL for Travel Agents</li>
+                <li>Chương trình khách hàng thân thiết Genius</li>
+                <li>Ưu đãi theo mùa và ngày lễ</li>
+                <li>Bài viết du lịch</li>
+                <li>Booking.com dành cho Doanh nghiệp</li>
+                <li>Giải thưởng Traveller Review</li>
+                <li>Thuê xe</li>
+                <li>Tìm chuyến bay</li>
+                <li>Đặt chỗ nhà hàng</li>
+                <li>THE HOTEL dành cho Đại lý Du lịch</li>
               </ul>
             </div>
             <div class="footer-column">
-              <h3>Terms</h3>
+              <h3>Điều khoản</h3>
               <ul>
-                <li>Privacy & cookies</li>
-                <li>Terms & conditions</li>
-                <li>Partner dispute</li>
-                <li>Modern Slavery Statement</li>
-                <li>Human Rights Statement</li>
+                <li>Quyền riêng tư &amp; cookie</li>
+                <li>Điều khoản &amp; điều kiện</li>
+                <li>Giải quyết tranh chấp với đối tác</li>
+                <li>Tuyên bố về Nô lệ Hiện đại</li>
+                <li>Tuyên bố về Quyền Con Người</li>
               </ul>
             </div>
             <div class="footer-column">
-              <h3>Partners</h3>
+              <h3>Đối tác</h3>
               <ul>
-                <li>Google Sign-in</li>
-                <li>Partner help</li>
-                <li>List your property</li>
-                <li>Become an affiliate partner</li>
+                <li>Đăng nhập Google</li>
+                <li>Hỗ trợ đối tác</li>
+                <li>Liệt kê chỗ nghỉ của bạn</li>
+                <li>Trở thành đối tác liên kết</li>
               </ul>
             </div>
             <div class="footer-column">
-              <h3>About us</h3>
+              <h3>Về chúng tôi</h3>
               <ul>
-                <li>About THE HOTEL</li>
-                <li>How we work</li>
-                <li>Sustainability</li>
-                <li>Press center</li>
-                <li>Careers</li>
-                <li>Investor relations</li>
-                <li>Corporate contact</li>
+                <li>Về THE HOTEL</li>
+                <li>Cách chúng tôi hoạt động</li>
+                <li>Tính bền vững</li>
+                <li>Trung tâm báo chí</li>
+                <li>Tuyển dụng</li>
+                <li>Quan hệ nhà đầu tư</li>
+                <li>Liên hệ doanh nghiệp</li>
               </ul>
             </div>
           </div>
           <div class="footer-bottom">
             <div class="language-selector">
-              <span>VND</span>
+              <span class="currency">VND</span>
+              <img src="https://c.animaapp.com/EyGCpdw4/img/img@2x.png" alt="Vietnam flag" class="flag" />
             </div>
           </div>
         </footer>

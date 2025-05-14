@@ -74,8 +74,8 @@
   height: 24px;
   top: 12px;
   left: 170px;
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame.svg);
   position: absolute;
-  background-image: url(./img/frame-11.svg);
   background-size: 100% 100%;
 }
 
@@ -84,8 +84,8 @@
   height: 20px;
   top: 556px;
   left: 1113px;
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-1.svg);
   position: absolute;
-  background-image: url(./img/frame-2.svg);
   background-size: 100% 100%;
 }
 
@@ -259,7 +259,7 @@
   width: 319px;
   top: 22px;
   left: 0;
-  font-family: "Inter-Bold", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 700;
   color: #0a5c36;
   font-size: 20px;
@@ -296,7 +296,7 @@
   height: 20px;
   top: 1px;
   left: 63px;
-  background-image: url(./img/frame-5.svg);
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-2.svg);
   background-size: 100% 100%;
 }
 
@@ -398,8 +398,8 @@
   height: 16px;
   top: -1px;
   left: 0;
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-3.svg);
   position: absolute;
-  background-image: url(./img/frame.svg);
   background-size: 100% 100%;
 }
 
@@ -426,12 +426,12 @@
 }
 
 .payment .span-SVG-2 {
+  position: absolute;
   width: 16px;
   height: 16px;
   top: -1px;
   left: 0;
-  position: absolute;
-  background-image: url(./img/image.svg);
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-4.svg);
   background-size: 100% 100%;
 }
 
@@ -704,7 +704,7 @@
   height: 24px;
   top: 10px;
   left: 295px;
-  background-image: url(./img/frame-13.svg);
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-5.svg);
   background-size: 100% 100%;
 }
 
@@ -984,7 +984,7 @@
   height: 24px;
   top: 0;
   left: 0;
-  background-image: url(./img/frame-3.svg);
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-6.svg);
   background-size: 100% 100%;
 }
 
@@ -1066,12 +1066,12 @@
 }
 
 .payment .container-span-SVG-2 {
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-7.svg);
   position: absolute;
   width: 20px;
   height: 20px;
   top: 0;
   left: 0;
-  background-image: url(./img/frame-9.svg);
   background-size: 100% 100%;
 }
 
@@ -1506,7 +1506,7 @@
   height: 24px;
   top: 0;
   left: 0;
-  background-image: url(./img/frame-7.svg);
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-13.svg);
   background-size: 100% 100%;
 }
 
@@ -1574,7 +1574,7 @@
   height: 16px;
   top: 9px;
   left: 312px;
-  background-image: url(./img/frame-4.svg);
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-14.svg);
   background-size: 100% 100%;
 }
 
@@ -1636,12 +1636,12 @@
 }
 
 .payment .container-span-SVG-3 {
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-9.svg);
   position: absolute;
   width: 20px;
   height: 20px;
   top: 0;
   left: 0;
-  background-image: url(./img/frame-6.svg);
   background-size: 100% 100%;
 }
 
@@ -1668,12 +1668,12 @@
 }
 
 .payment .container-span-SVG-4 {
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-10.svg);
   position: absolute;
   width: 20px;
   height: 20px;
   top: 0;
   left: 0;
-  background-image: url(./img/frame-12.svg);
   background-size: 100% 100%;
 }
 
@@ -1700,12 +1700,12 @@
 }
 
 .payment .container-span-SVG-5 {
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-11.svg);
   position: absolute;
   width: 20px;
   height: 20px;
   top: 0;
   left: 0;
-  background-image: url(./img/frame-10.svg);
   background-size: 100% 100%;
 }
 
@@ -1732,12 +1732,12 @@
 }
 
 .payment .container-span-SVG-6 {
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/frame-12.svg);
   position: absolute;
   width: 20px;
   height: 20px;
   top: 0;
   left: 0;
-  background-image: url(./img/frame-14.svg);
   background-size: 100% 100%;
 }
 
@@ -1868,7 +1868,7 @@
   width: 245px;
   top: 23px;
   left: 30px;
-  font-family: "Inter-Bold", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 700;
   color: #ffffff;
   font-size: 24px;
@@ -1914,7 +1914,7 @@
   width: 347px;
   top: -1px;
   left: -1px;
-  font-family: "Inter-Bold", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 700;
   color: #ffffff;
   font-size: 17.6px;
@@ -1936,7 +1936,7 @@
   width: 165px;
   top: 0;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -1948,7 +1948,7 @@
   position: absolute;
   top: 44px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -1962,7 +1962,7 @@
   width: 217px;
   top: 70px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -1974,7 +1974,7 @@
   position: absolute;
   top: 115px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -1996,7 +1996,7 @@
   width: 347px;
   top: -1px;
   left: 0;
-  font-family: "Inter-Bold", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 700;
   color: #ffffff;
   font-size: 17.6px;
@@ -2017,7 +2017,7 @@
   width: 197px;
   top: 0;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2029,7 +2029,7 @@
   position: absolute;
   top: 70px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2043,7 +2043,7 @@
   width: 193px;
   top: 97px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2055,7 +2055,7 @@
   position: absolute;
   top: 141px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2068,7 +2068,7 @@
   position: absolute;
   top: 167px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2081,7 +2081,7 @@
   position: absolute;
   top: 193px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2094,7 +2094,7 @@
   position: absolute;
   top: 219px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2108,7 +2108,7 @@
   width: 209px;
   top: 245px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2136,7 +2136,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2149,7 +2149,7 @@
   position: absolute;
   top: 26px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2162,7 +2162,7 @@
   position: absolute;
   top: 52px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2175,7 +2175,7 @@
   position: absolute;
   top: 78px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2188,7 +2188,7 @@
   position: absolute;
   top: 105px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2233,7 +2233,7 @@
   position: absolute;
   top: 131px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2246,7 +2246,7 @@
   position: absolute;
   top: 157px;
   left: 0;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2270,7 +2270,7 @@
   width: 64px;
   top: 18px;
   left: 60px;
-  font-family: "Inter-Regular", Helvetica;
+  font-family: "Inter", Helvetica;
   font-weight: 400;
   color: #ffffff;
   font-size: 14.4px;
@@ -2286,42 +2286,27 @@
   top: 16px;
   left: 0;
   border-radius: 11.99px;
-  background-image: url(./img/img.png);
+  background-image: url(https://c.animaapp.com/EyGCpdw4/img/img@2x.png);
   background-size: cover;
   background-position: 50% 50%;
 }
 /* Original CSS code should be injected here */
 
-/* Additional styles for semantic HTML structure */
+/* Additional styles for semantic HTML elements */
 .content {
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0 20px;
 }
 
-main {
+.main-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
-section {
-  background-color: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.booking-details,
-.guest-details,
-.arrival-time,
-.special-requests,
-.house-rules,
-.booking-tips {
-  flex: 1 1 300px;
-}
-
-h2 {
+.section-title {
   font-family: "Segoe UI-Bold", Helvetica;
   font-weight: 700;
   color: #1a1a1a;
@@ -2329,37 +2314,99 @@ h2 {
   margin-bottom: 15px;
 }
 
-.form-group {
+.booking-details,
+.price-summary,
+.guest-details,
+.arrival-time,
+.special-requests,
+.house-rules,
+.booking-tips {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e7e7e7;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.room-info,
+.stay-details,
+.room-selection {
   margin-bottom: 15px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-family: "Segoe UI-Regular", Helvetica;
-  font-weight: 400;
-  color: #1a1a1a;
+.amenities {
+  display: flex;
+  list-style: none;
+  padding: 0;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-select,
-textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #858585;
-  border-radius: 4px;
-  font-family: "Segoe UI-Regular", Helvetica;
+.amenity {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.amenity-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.price-breakdown {
+  list-style: none;
+  padding: 0;
+}
+
+.price-breakdown li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.guest-form {
+  display: grid;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.required {
+  color: #d3111e;
 }
 
 .phone-input {
   display: flex;
-  gap: 10px;
 }
 
 .phone-input select {
   width: 100px;
+  margin-right: 10px;
+}
+
+.rules-list,
+.tips-list {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.rules-list li,
+.tips-list li {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.rules-list li::before,
+.tips-list li::before {
+  content: "•";
+  position: absolute;
+  left: -20px;
 }
 
 .payment-action {
@@ -2371,19 +2418,10 @@ textarea {
   background-color: #006ce3;
   color: #ffffff;
   border: none;
-  padding: 10px 20px;
   border-radius: 4px;
-  font-family: "Segoe UI-Black", Helvetica;
-  font-weight: 900;
-  font-size: 18px;
+  padding: 10px 20px;
+  font-weight: bold;
   cursor: pointer;
-}
-
-.footer {
-  background-color: #0a5c36;
-  color: #ffffff;
-  padding: 40px 0;
-  margin-top: 40px;
 }
 
 .footer-content {
@@ -2393,15 +2431,14 @@ textarea {
 }
 
 .footer-column {
-  flex: 1 1 200px;
+  flex: 1;
+  min-width: 200px;
   margin-bottom: 20px;
 }
 
 .footer-column h3 {
-  font-family: "Inter-Bold", Helvetica;
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 15px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .footer-column ul {
@@ -2410,9 +2447,8 @@ textarea {
 }
 
 .footer-column li {
-  font-family: "Inter-Regular", Helvetica;
-  font-size: 14px;
-  margin-bottom: 10px;
+  color: #ffffff;
+  margin-bottom: 5px;
 }
 
 .footer-bottom {
@@ -2422,20 +2458,22 @@ textarea {
 }
 
 .language-selector {
-  font-family: "Inter-Regular", Helvetica;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.flag {
+  width: 24px;
+  height: 16px;
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
-  .content {
-    padding: 10px;
+  .main-content {
+    flex-direction: column;
   }
 
   .footer-content {
     flex-direction: column;
-  }
-
-  .footer-column {
-    margin-bottom: 30px;
   }
 }
