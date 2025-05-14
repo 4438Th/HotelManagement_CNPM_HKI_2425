@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="css/globals-pay.css" />
+    <link rel="stylesheet" href="css/style-pay.css" />
+  </head>
+  <body>
+    <div class="payment">
+      <div class="content">
+        <header class="header">
+          <h1 class="hotel-name">THE HOTEL</h1>
+        </header>
+        <main>
+          <section class="booking-details">
+            <h2>Booking Details</h2>
+            <div class="hotel-info">
+              <h3>808 -tầng 8</h3>
+              <p>Room</p>
+              <address>123 Đường Mai Anh Đào, Phường 8, Đà Lạt, Lâm Đồng, Việt Nam</address>
+              <div class="rating">
+                <span class="score">8.7</span>
+                <span class="reviews">· 161 tuyêth voeif</span>
+              </div>
+              <ul class="amenities">
+                <li>wifi</li>
+                <li>Hồ Bơi</li>
+              </ul>
+            </div>
+            <div class="reservation-details">
+              <h3>Reservation Details</h3>
+              <div class="check-in-out">
+                <div class="check-in">
+                  <h4>Check-in</h4>
+                  <p>Fri, 2/5/2025</p>
+                  <p>2:00 PM – 11:30 PM</p>
+                </div>
+                <div class="check-out">
+                  <h4>Check-out</h4>
+                  <p>Sun, 4/5/2025</p>
+                  <p>5:00 AM – 12:00 PM</p>
+                </div>
+              </div>
+              <p>Total stay: 2 nights</p>
+              <div class="room-selection">
+                <h4>Your selection</h4>
+                <p>1 Room for 2 adults</p>
+              </div>
+            </div>
+            <div class="price-summary">
+              <h3>Price Summary</h3>
+              <dl>
+                <dt>Original Price</dt>
+                <dd>VND 1,200,000</dd>
+                <dt>Discounted Price</dt>
+                <dd>VND 1,000,000</dd>
+              </dl>
+              <div class="total-price">
+                <h4>Total Price</h4>
+                <p><s>VND 1,200,000</s></p>
+                <p>VND 1,000,000</p>
+              </div>
+            </div>
+          </section>
+          <section class="guest-details">
+            <h2>Enter Your Details</h2>
+            <p>Please fill in the required information (*)</p>
+            <form>
+              <div class="form-group">
+                <label for="lastName">Last Name <span aria-label="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" required />
+              </div>
+              <div class="form-group">
+                <label for="firstName">First Name <span aria-label="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span aria-label="required">*</span></label>
+                <input type="email" id="email" name="email" required />
+                <p>Booking confirmation will be sent to this email address</p>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span aria-label="required">*</span></label>
+                <div class="phone-input">
+                  <select id="countryCode" name="countryCode">
+                    <option value="+84">VN +84</option>
+                  </select>
+                  <input type="tel" id="phone" name="phone" required />
+                </div>
+                <p>For booking verification and property communication</p>
+              </div>
+              <div class="form-group">
+                <label for="country">Country/Region <span aria-label="required">*</span></label>
+                <input type="text" id="country" name="country" required />
+              </div>
+              <div class="form-group">
+                <input type="checkbox" id="appLink" name="appLink" />
+                <label for="appLink">Send me a link to download the app</label>
+              </div>
+            </form>
+          </section>
+          <section class="arrival-time">
+            <h2>Your Arrival Time</h2>
+            <p>Late check-in until 23:00.</p>
+            <div class="form-group">
+              <label for="estimatedArrival">Add your estimated arrival time</label>
+              <select id="estimatedArrival" name="estimatedArrival">
+                <option value="">Select time</option>
+              </select>
+              <p>Time is in Ho Chi Minh City timezone</p>
+            </div>
+          </section>
+          <section class="special-requests">
+            <h2>Special Requests</h2>
+            <p>
+              Special requests are not guaranteed but the property will do its best to meet your needs. You can always
+              make special requests after your booking is complete!
+            </p>
+            <div class="form-group">
+              <label for="specialRequests">Please write your requests here (optional)</label>
+              <textarea id="specialRequests" name="specialRequests"></textarea>
+            </div>
+          </section>
+          <section class="house-rules">
+            <h2>Review House Rules</h2>
+            <p>The host would like you to agree to the following house rules:</p>
+            <ul>
+              <li>No smoking</li>
+              <li>No parties or events</li>
+              <li>No pets allowed</li>
+            </ul>
+            <p>By proceeding with the next steps, you are agreeing to these house rules.</p>
+          </section>
+          <section class="booking-tips">
+            <h2>Booking Tips:</h2>
+            <ul>
+              <li>No credit card needed</li>
+              <li>You'll have the entire apartment to yourself!</li>
+              <li>No payment required today. You'll pay during your stay.</li>
+              <li>
+                Congratulations! You've chosen the lowest-priced apartment at LANDMARK 81 Residences Suite. Don't miss
+                out, book now!
+              </li>
+            </ul>
+          </section>
+        </main>
+        <div class="payment-action">
+          <button type="submit" class="pay-button">THANH TOÁN</button>
+        </div>
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="footer-column">
+              <h3>Support</h3>
+              <ul>
+                <li>Coronavirus (COVID-19) FAQs</li>
+                <li>Manage your trip</li>
+                <li>Contact Customer Service</li>
+                <li>Safety Resource Center</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Discover</h3>
+              <ul>
+                <li>Genius loyalty program</li>
+                <li>Seasonal and holiday deals</li>
+                <li>Travel articles</li>
+                <li>Booking.com for Business</li>
+                <li>Traveller Review Awards</li>
+                <li>Car rental</li>
+                <li>Flight finder</li>
+                <li>Restaurant reservations</li>
+                <li>THE HOTEL for Travel Agents</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Terms</h3>
+              <ul>
+                <li>Privacy & cookies</li>
+                <li>Terms & conditions</li>
+                <li>Partner dispute</li>
+                <li>Modern Slavery Statement</li>
+                <li>Human Rights Statement</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Partners</h3>
+              <ul>
+                <li>Google Sign-in</li>
+                <li>Partner help</li>
+                <li>List your property</li>
+                <li>Become an affiliate partner</li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>About us</h3>
+              <ul>
+                <li>About THE HOTEL</li>
+                <li>How we work</li>
+                <li>Sustainability</li>
+                <li>Press center</li>
+                <li>Careers</li>
+                <li>Investor relations</li>
+                <li>Corporate contact</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <div class="language-selector">
+              <span>VND</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
