@@ -50,6 +50,10 @@ body {
     cursor: pointer;
 }
 
+.login-form button:hover{
+  color: black;
+}
+
 .login-form .separator {
     text-align: center;
     margin: 15px 0;
@@ -68,11 +72,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
 .login-form .social-login button img {
     margin-right: 5px;
     height: 20px;
+}
+
+.login-form .social-login button:hover{
+ background-color: #28c77b;
 }
 
 .login-form .signup-link {
@@ -83,6 +92,12 @@ body {
 .signup-link a {
     color: white;
     text-decoration: underline;
+    transition: transform 0.3s ease, font-size 0.3s ease;
+    display: inline-block;
+}
+
+.signup-link a:hover{
+  transform: scale(1.2);
 }
 
 @media (max-width: 600px) {
