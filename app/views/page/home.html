@@ -2,32 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
-    <!-- style.css -->
-    <link rel="stylesheet" href="/public/css/style.css">
-    <!-- boostrap.css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+  <!-- style.css -->
+  <link rel="stylesheet" href="/public/css/style.css">
+  <!-- boostrap.css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 
 <body>
-     <header>
+  <header>
     <!-- Menu điều hướng -->
     <div class="navbar">
-      <div class="logo">THE HOTEL</div>
+      <a href="home.html" class="logo">THE HOTEL</a>
       <nav class="nav-links">
         <a href="#">Nơi ở</a>
         <a href="#">Thuê xe</a>
         <a href="#">Khách sạn</a>
         <a href="#">Taxi sân bay</a>
         <a href="#">Chuyến bay</a>
+        <a href="abou.html">Giới thiệu</a>
+        <a href="profile_acount.html">demo profile acount</a>
       </nav>
       <!-- đăng kí đăng nhập -->
       <div class="auth">
-        <button>Đăng ký</button>
-        <button>Đăng nhập</button>
+        <button onclick="location.href='login.html'">Đăng kí</button>
+        <button onclick="location.href='login.html'">Đăng nhập</button>
       </div>
     </div>
     <!-- Thanh tìm kiếm -->
@@ -38,7 +40,7 @@
       <button>Tìm</button>
     </div>
   </header>
- <!-- banner -->
+  <!-- banner -->
   <section class="banner">
     <div class="banner-text">
       <h2>Vi vu thoải mái như ở nhà</h2>
@@ -50,30 +52,31 @@
   <section class="room-section">
     <h3>Phòng nổi bật</h3>
     <div class="room-grid">
-      <div class="room-card">Phòng 101</div>
-      <div class="room-card">Phòng 202</div>
-      <div class="room-card">Phòng 303</div>
-      <div class="room-card">Phòng 404</div>
+      <div class="room-card phong101" onclick="location.href='booking.html'">Phòng 101</div>
+      <div class="room-card phong202" onclick="location.href='booking.html'">Phòng 202</div>
+      <div class="room-card phong303" onclick="location.href='booking.html'">Phòng 303</div>
+      <div class="room-card phong404" onclick="location.href='booking.html'">Phòng 404</div>
     </div>
+
   </section>
   <section class="room-section">
     <h3>Phong cách thịnh hành</h3>
     <div class="room-grid">
-      <div class="room-card">Phòng kiểu Trung Quóc</div>
-      <div class="room-card">Phòng kiểu Nhật Bổn</div>
-      <div class="room-card">Phong cách hiện đại</div>
-      <div class="room-card">View triệu đô</div>
+      <div class="room-card china">Phòng kiểu Trung Quóc</div>
+      <div class="room-card japan ">Phòng kiểu Nhật Bổn</div>
+      <div class="room-card modern">Phong cách hiện đại</div>
+      <div class="room-card view">View triệu đô</div>
     </div>
   </section>
 
   <footer>
   </footer>
-    <!-- boostrap.js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
-    <!-- script.js -->
-    <script src="/public/js/script.js"></script>
+  <!-- boostrap.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <!-- script.js -->
+  <script src="/public/js/script.js"></script>
 </body>
 
 </html>

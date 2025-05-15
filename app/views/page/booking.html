@@ -7,23 +7,23 @@
 </head>
 <body>
   <header>
-    <h1>THE HOTEL</h1>
+    <h1 onclick="location.href='home.html'">THE HOTEL</h1>
   </header>
 
   <main class="container">
     <section class="gallery">
-      <img src="main.jpg" alt="Khách sạn chính" class="main-img">
+      <img src="../../../public/image/phong-101.jpg" alt="Khách sạn chính" class="main-img">
       <div class="thumbs">
-        <img src="1.jpg" alt="">
-        <img src="2.jpg" alt="">
-        <img src="3.jpg" alt="">
-        <img src="4.jpg" alt="">
-        <img src="5.jpg" alt="">
+        <img src="../../../public/image/phong-202.jpg" alt="">
+        <img src="../../../public/image/phong-303.png" alt="">
+        <img src="../../../public/image/phong-404.jpg" alt="">
+        <img src="../../../public/image/phong-cach-hien-dai.jpg" alt="">
+        <img src="../../../public/image/view-trieu-do.jpg" alt="">
       </div>
     </section>
 
     <section class="info">
-      <h2>Phòng 808 - tầng 8</h2>
+      <h2>Phòng 101</h2>
       <p><strong>Địa chỉ:</strong> 123 Đường Mai Anh Đào, Phường 8, Đà Lạt</p>
       <p><strong>Điểm đánh giá:</strong> ⭐⭐⭐⭐☆ 8.7 (Tuyệt vời)</p>
 
@@ -50,5 +50,29 @@
   <footer>
     <p>&copy; 2025 THE HOTEL</p>
   </footer>
+<script>
+
+  const mainImg = document.querySelector('.main-img');
+  const thumbs = document.querySelectorAll('.thumbs img');
+
+  let currentIndex = 0;
+  const imageList = Array.from(thumbs).map(img => img.src);
+
+  // Click để đổi ảnh chính
+  thumbs.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      mainImg.src = img.src;
+      currentIndex = index; // cập nhật vị trí ảnh hiện tại
+    });
+  });
+
+  // Tự động đổi ảnh chính sau mỗi 2 giây
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % imageList.length;
+    mainImg.src = imageList[currentIndex];
+  }, 3000);
+
+
+</script>
 </body>
 </html>
