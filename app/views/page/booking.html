@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="UTF-8">
   <title>THE HOTEL - Phòng 808</title>
   <link rel="stylesheet" href="../../../public/css/style-booking.css">
 </head>
+
 <body>
   <header>
     <h1 onclick="location.href='home.html'">THE HOTEL</h1>
@@ -50,29 +52,30 @@
   <footer>
     <p>&copy; 2025 THE HOTEL</p>
   </footer>
-<script>
+  <script>
 
-  const mainImg = document.querySelector('.main-img');
-  const thumbs = document.querySelectorAll('.thumbs img');
+    const mainImg = document.querySelector('.main-img');
+    const thumbs = document.querySelectorAll('.thumbs img');
 
-  let currentIndex = 0;
-  const imageList = Array.from(thumbs).map(img => img.src);
+    let currentIndex = 0;
+    const imageList = Array.from(thumbs).map(img => img.src);
 
-  // Click để đổi ảnh chính
-  thumbs.forEach((img, index) => {
-    img.addEventListener('click', () => {
-      mainImg.src = img.src;
-      currentIndex = index; // cập nhật vị trí ảnh hiện tại
+    // Click để đổi ảnh chính
+    thumbs.forEach((img, index) => {
+      img.addEventListener('click', () => {
+        mainImg.src = img.src;
+        currentIndex = index; // cập nhật vị trí ảnh hiện tại
+      });
     });
-  });
 
-  // Tự động đổi ảnh chính sau mỗi 2 giây
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % imageList.length;
-    mainImg.src = imageList[currentIndex];
-  }, 3000);
+    // Tự động đổi ảnh chính sau mỗi 2 giây
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % imageList.length;
+      mainImg.src = imageList[currentIndex];
+    }, 3000);
 
 
-</script>
+  </script>
 </body>
+
 </html>

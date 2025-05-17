@@ -1,5 +1,5 @@
 <?php
-class SigninController
+class LoginController
 {
     public function index()
     {
