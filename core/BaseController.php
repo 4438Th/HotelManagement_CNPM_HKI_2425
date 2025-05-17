@@ -38,7 +38,7 @@ class BaseController
      */
     protected function render($viewName, $data = [])
     {
-        $viewPath = '../views/' . $viewName . '.php';
+        $viewPath = PAGE_PATH . '/' . $viewName . '.html';
         if (file_exists($viewPath)) {
             extract($data);
             require_once $viewPath;

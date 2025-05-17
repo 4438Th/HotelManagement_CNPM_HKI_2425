@@ -21,8 +21,10 @@ body {
 }
 
 .logo {
-  text-decoration: none; /* bỏ gạch chân */
-  color: inherit;         /* giữ màu chữ */
+  text-decoration: none;
+  /* bỏ gạch chân */
+  color: inherit;
+  /* giữ màu chữ */
   font-size: 24px;
   font-weight: bold;
 }
@@ -59,7 +61,8 @@ body {
   padding: 6px 12px;
   background: white;
   color: #004225;
-  border: 1px solid transparent; /* giữ sẵn border nhưng ẩn */
+  border: 1px solid transparent;
+  /* giữ sẵn border nhưng ẩn */
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
@@ -70,7 +73,7 @@ body {
   border: 1px solid white;
   background: #004225;
   color: white;
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 
@@ -101,12 +104,16 @@ body {
   font-weight: bold;
   background-color: #004225;
 }
+
 /* baner nằm đây */
 .banner {
   background-image: url('../image/banner.jpeg');
-   background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ phần tử */
-  background-position: center; /* Căn giữa ảnh */
-  background-repeat: no-repeat; /* Không lặp ảnh */
+  background-size: cover;
+  /* Đảm bảo ảnh bao phủ toàn bộ phần tử */
+  background-position: center;
+  /* Căn giữa ảnh */
+  background-repeat: no-repeat;
+  /* Không lặp ảnh */
   color: white;
   text-align: left;
   padding: 100px 30px;
@@ -134,8 +141,9 @@ body {
   cursor: pointer;
   border-radius: 5px;
   transition: transform 0.1s ease;
-transform-origin: left center;
+  transform-origin: left center;
 }
+
 .book-now:hover {
   transform: scale(1.5);
 }
@@ -161,61 +169,94 @@ transform-origin: left center;
   padding: 40px;
   text-align: center;
   border-radius: 10px;
-  color: white; /* Thêm để chữ dễ nhìn trên ảnh */
+  color: white;
+  /* Thêm để chữ dễ nhìn trên ảnh */
   background-size: cover;
   background-position: center;
   font-weight: bold;
 }
+
 @keyframes crazyShake {
-  0%   { transform: rotate(0deg) scale(1); }
-  25%  { transform: rotate(3deg) scale(1.05); }
-  50%  { transform: rotate(-3deg) scale(0.95); }
-  75%  { transform: rotate(2deg) scale(1.08); }
-  100% { transform: rotate(0deg) scale(1); }
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(3deg) scale(1.05);
+  }
+
+  50% {
+    transform: rotate(-3deg) scale(0.95);
+  }
+
+  75% {
+    transform: rotate(2deg) scale(1.08);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
 }
 
 @keyframes colorFlash {
-  0%   { filter: hue-rotate(0deg); }
-  50%  { filter: hue-rotate(180deg); }
-  100% { filter: hue-rotate(360deg); }
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(180deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .room-card:hover {
   animation: crazyShake 0.4s infinite ease-in-out,
-             colorFlash 1s infinite linear;
+    colorFlash 1s infinite linear;
   box-shadow: 0 0 30px rgba(255, 0, 255, 0.6);
   cursor: pointer;
 }
 
 .room-card.phong101 {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-101.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-101.jpg');
 }
+
 .room-card.phong202 {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-202.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-202.jpg');
 }
+
 .room-card.phong303 {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-303.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-303.png');
 }
+
 .room-card.phong404 {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-404.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-404.jpg');
 }
 
 .room-card.china {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-ngu-co-trang-trung-quoc_2.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-ngu-co-trang-trung-quoc_2.jpg');
 }
+
 .room-card.japan {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-ngu-nhat-ban.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-ngu-nhat-ban.jpg');
 }
+
 .room-card.modern {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-cach-hien-dai.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/phong-cach-hien-dai.jpg');
 }
+
 .room-card.view {
-  background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/view-trieu-do.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../image/view-trieu-do.jpg');
 }
 
 
 @media (max-width: 768px) {
-  .navbar, .auth, .nav-links {
+
+  .navbar,
+  .auth,
+  .nav-links {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -225,7 +266,8 @@ transform-origin: left center;
     align-items: stretch;
   }
 
-  .search-bar input, .search-bar button {
+  .search-bar input,
+  .search-bar button {
     width: 100%;
   }
 
